@@ -1,5 +1,6 @@
 package ua.icm.dialer;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,196 +46,110 @@ public class MainActivity extends AppCompatActivity {
         plusBtn = findViewById(R.id.btnPlus); zeroBtn = findViewById(R.id.btn0); hashtagBtn = findViewById(R.id.btnHashtag);
 
         delBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                       changeInput("del");
-                    }
-                }
+                v -> changeInput("del")
         );
 
         oneBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("1");
-                    }
-                }
+                v -> changeInput("1")
         );
 
         twoBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("2");
-                    }
-                }
+                v -> changeInput("2")
         );
 
         threeBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("3");
-                    }
-                }
+                v -> changeInput("3")
         );
 
         fourBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("4");
-                    }
-                }
+                v -> changeInput("4")
         );
 
         fiveBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("5");
-                    }
-                }
+                v -> changeInput("5")
         );
 
         sixBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("6");
-                    }
-                }
+                v -> changeInput("6")
         );
 
         sevenBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("7");
-                    }
-                }
+                v -> changeInput("7")
         );
 
         eightBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("8");
-                    }
-                }
+                v -> changeInput("8")
         );
 
         nineBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("9");
-                    }
-                }
+                v -> changeInput("9")
         );
 
         plusBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("+");
-                    }
-                }
+                v -> changeInput("+")
         );
 
         zeroBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("0");
-                    }
-                }
+                v -> changeInput("0")
         );
 
         hashtagBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        changeInput("#");
-                    }
-                }
+                v -> changeInput("#")
         );
 
 
         dialBtn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.d(LOG_TAG, "Call Button Clicked");
-                        number = phoneNumberInput.getText().toString().trim();
-                        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+Uri.encode(number)));
-                        startActivity(intent);
-                    }
+                v -> {
+                    Log.d(LOG_TAG, "Call Button Clicked");
+                    number = phoneNumberInput.getText().toString().trim();
+                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+Uri.encode(number)));
+                    startActivity(intent);
                 }
         );
 
         speedDialBtn1.setOnLongClickListener(
-                new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View view) {
-                        btnClicked = 1;
-                        Log.d(LOG_TAG, "Speed Dial Button 1 Long Clicked");
-                        return handleLongClick();
-                    }
+                view -> {
+                    btnClicked = 1;
+                    Log.d(LOG_TAG, "Speed Dial Button 1 Long Clicked");
+                    return handleLongClick();
                 }
         );
         speedDialBtn2.setOnLongClickListener(
-                new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View view) {
-                        btnClicked = 2;
-                        Log.d(LOG_TAG, "Speed Dial Button 2 Long Clicked");
-                        return handleLongClick();
-                    }
+                view -> {
+                    btnClicked = 2;
+                    Log.d(LOG_TAG, "Speed Dial Button 2 Long Clicked");
+                    return handleLongClick();
                 }
         );
         speedDialBtn3.setOnLongClickListener(
-            new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
+                view -> {
                     btnClicked = 3;
                     Log.d(LOG_TAG, "Speed Dial Button 3 Long Clicked");
                     return handleLongClick();
                 }
-            }
         );
 
         speedDialBtn1.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.d(LOG_TAG, "Speed Dial Button 1 Clicked");
-                        if(speedDialContacts.containsKey(1)) {
-                            phoneNumberInput.setText(speedDialContacts.get(1)[1]);
-                        }
+                v -> {
+                    Log.d(LOG_TAG, "Speed Dial Button 1 Clicked");
+                    if(speedDialContacts.containsKey(1)) {
+                        phoneNumberInput.setText(Objects.requireNonNull(speedDialContacts.get(1))[1]);
                     }
                 }
         );
         speedDialBtn2.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.d(LOG_TAG, "Speed Dial Button 2 Clicked");
-                        if(speedDialContacts.containsKey(2)) {
-                            phoneNumberInput.setText(speedDialContacts.get(2)[1]);
-                        }
+                v -> {
+                    Log.d(LOG_TAG, "Speed Dial Button 2 Clicked");
+                    if(speedDialContacts.containsKey(2)) {
+                        phoneNumberInput.setText(Objects.requireNonNull(speedDialContacts.get(2))[1]);
                     }
                 }
         );
         speedDialBtn3.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.d(LOG_TAG, "Speed Dial Button 3 Clicked");
-                        if(speedDialContacts.containsKey(3)) {
-                            phoneNumberInput.setText(speedDialContacts.get(3)[1]);
-                        }
+                v -> {
+                    Log.d(LOG_TAG, "Speed Dial Button 3 Clicked");
+                    if(speedDialContacts.containsKey(3)) {
+                        phoneNumberInput.setText(Objects.requireNonNull(speedDialContacts.get(3))[1]);
                     }
                 }
         );
@@ -275,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     protected void changeInput(String input) {
         String text = phoneNumberInput.getText().toString();
         if(input.equals("del")) {

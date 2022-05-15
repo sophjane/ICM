@@ -16,7 +16,7 @@
         <!--input of phone number-->
         <EditText
             android:id="@+id/phoneNumber"
-            android:hint="Enter Phone Number"
+            android:hint="@string/input"
             android:inputType="phone"
             android:layout_marginHorizontal="10dp"
             />
@@ -24,7 +24,7 @@
         <Button
             android:id="@+id/delete"
             android:background="@color/pearlBush"
-            android:text="DEL"
+            android:text="@string/del_caps"
             android:textColor="@color/white"
             android:layout_marginHorizontal="25dp"
             />
@@ -37,7 +37,7 @@
         android:layout_marginBottom="25dp"
         >
         <Button
-            android:hint="Contact1"
+            android:hint="@string/first_contact"
             android:id="@+id/speedDialBtn1"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
@@ -45,7 +45,7 @@
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:hint="Contact2"
+            android:hint="@string/second_contact"
             android:id="@+id/speedDialBtn2"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
@@ -53,7 +53,7 @@
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:hint="Contact3"
+            android:hint="@string/third_contact"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
             android:id="@+id/speedDialBtn3"
@@ -68,27 +68,27 @@
         android:layout_marginBottom="25dp"
         >
         <Button
-            android:text="1"
+            android:text="@string/one"
             android:id="@+id/btn1"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="2"
+            android:text="@string/two"
             android:id="@+id/btn2"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="3"
+            android:text="@string/three"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
             android:id="@+id/btn3"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
     </TableRow>
@@ -99,27 +99,27 @@
         android:layout_marginBottom="25dp"
         >
         <Button
-            android:text="4"
+            android:text="@string/four"
             android:id="@+id/btn4"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="5"
+            android:text="@string/five"
             android:id="@+id/btn5"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="6"
+            android:text="@string/six"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
             android:id="@+id/btn6"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
     </TableRow>
@@ -130,27 +130,27 @@
         android:layout_marginBottom="25dp"
         >
         <Button
-            android:text="7"
+            android:text="@string/seven"
             android:id="@+id/btn7"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="8"
+            android:text="@string/eight"
             android:id="@+id/btn8"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="9"
+            android:text="@string/nine"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
             android:id="@+id/btn9"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
     </TableRow>
@@ -161,27 +161,27 @@
         android:layout_marginBottom="25dp"
         >
         <Button
-            android:text="+"
+            android:text="@string/plus"
             android:id="@+id/btnPlus"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="0"
+            android:text="@string/zero"
             android:id="@+id/btn0"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
         <Button
-            android:text="#"
+            android:text="@string/hashtag"
             android:textColorHint="@color/pearlBush"
             android:textColor="@color/white"
             android:id="@+id/btnHashtag"
-            android:background="@color/edgewater"
+            android:background="@color/edgeWater"
             android:layout_marginHorizontal="10dp"
             />
     </TableRow>
@@ -193,7 +193,6 @@
         android:id="@+id/dialButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Call"
         android:background="@color/bayLeaf"
         android:src="@android:drawable/stat_sys_phone_call"
         android:layout_marginHorizontal="100dp"
