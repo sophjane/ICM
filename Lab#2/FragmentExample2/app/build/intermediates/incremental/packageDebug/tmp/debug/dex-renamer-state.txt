@@ -1,0 +1,4 @@
+#Fri May 13 15:59:29 WEST 2022
+base.0=/home/sophie/Desktop/ICM/Lab\#2/FragmentExample2/app/build/intermediates/dex/debug/mergeDexDebug/out
+renamed.0=classes.dex
+path.0=classes.dex

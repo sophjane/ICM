@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri May 13 15:59:29 WEST 2022
+0.base=/home/sophie/Desktop/ICM/Lab\#2/FragmentExample2/app/build/intermediates/dex/debug/mergeDexDebug/out
+0.path=classes.dex
+count=1
+0.baseType=DIRECTORY
+0.set=DEX

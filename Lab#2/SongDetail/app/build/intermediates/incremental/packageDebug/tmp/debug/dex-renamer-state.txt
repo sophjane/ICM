@@ -1,0 +1,4 @@
+#Sat May 14 11:20:49 WEST 2022
+base.0=/home/sophie/Desktop/ICM/Lab\#2/SongDetail/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex

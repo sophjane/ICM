@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sat May 14 11:20:49 WEST 2022
+0.base=/home/sophie/Desktop/ICM/Lab\#2/SongDetail/app/build/intermediates/transforms/dexMerger/debug/0
+0.path=classes.dex
+count=1
+0.baseType=DIRECTORY
+0.set=DEX
