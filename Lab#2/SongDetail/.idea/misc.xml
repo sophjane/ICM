@@ -5,7 +5,9 @@
       <map>
         <entry key="app/src/main/res/layout-w900dp/song_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_song_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_song_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_song_detail.xml" value="0.13994565217391305" />
+        <entry key="app/src/main/res/layout/song_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/song_list.xml" value="0.1" />
       </map>
     </option>
