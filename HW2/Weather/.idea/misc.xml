@@ -7,11 +7,12 @@
         <entry key="app/src/main/res/layout/activity_city_list.xml" value="0.17325227963525835" />
         <entry key="app/src/main/res/layout/activity_city_weather.xml" value="0.17325227963525835" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17325227963525835" />
-        <entry key="app/src/main/res/layout/city_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/city_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/city_list2.xml" value="0.10009057971014493" />
         <entry key="app/src/main/res/layout/city_list_content.xml" value="0.16590678824721378" />
-        <entry key="app/src/main/res/layout/city_weather.xml" value="0.16590678824721378" />
+        <entry key="app/src/main/res/layout/city_weather.xml" value="0.21348314606741572" />
         <entry key="app/src/main/res/layout/fragment_city_weather.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/layout.xml" value="0.16590678824721378" />
       </map>
     </option>
   </component>

@@ -10,7 +10,7 @@ public class CityUtils {
     public static final String CITY_ID_KEY = "item_id";
 
     // The number of songs.
-    private static final int COUNT = 7;
+    //private static final int COUNT = 7;
 
 
     public static class City {
@@ -33,7 +33,7 @@ public class CityUtils {
         }
     }*/
 
-    private static City createCityAtPosition(int position) {
+    /*private static City createCityAtPosition(int position) {
         String newName;
         String newWeather;
         switch (position) {
@@ -67,5 +67,5 @@ public class CityUtils {
                 break;
         }
         return new City(newName, newWeather);
-    }
+    }*/
 }

@@ -27,7 +27,7 @@ public class CityWeatherActivity extends AppCompatActivity {
         }
 
         if (savedInstanceState == null) {
-            int selectedCity = getIntent().getIntExtra(CityUtils.CITY_ID_KEY, 0);
+            int selectedCity = getIntent().getIntExtra("cityGlobalLocal", 0);
             CityWeatherFragment fragment = CityWeatherFragment.newInstance(selectedCity);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.city_weather_container, fragment)

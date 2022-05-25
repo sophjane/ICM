@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean mTwoPane = false;
     private RecyclerView recyclerView;
-    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +39,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
 
-        progressDialog = new ProgressDialog(MainActivity.this);
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
-
         //Create handle for the RetrofitInstance interface
         IpmaApiEndpoints service = RetrofitInstance.getRetrofitInstance().create(IpmaApiEndpoints.class);
 
@@ -53,47 +48,33 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call<CityGroup> call, Response<CityGroup> response) {
-                progressDialog.dismiss();
                 generateDataList(response.body());
             }
 
             @Override
             public void onFailure(Call<CityGroup> call, Throwable t) {
-                progressDialog.dismiss();
                 Toast.makeText(MainActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-      /*  RecyclerView recyclerView = (RecyclerView) findViewById(R.id.city_list);
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(CityUtils.CITY_ITEMS));
-
-        // The city_weather_container only shows up when the screen's width is 600dp or larger
-        if (findViewById(R.id.city_weather_container) != null) {
-            mTwoPane = true;
-        }*/
-
-
     }
 
     /*Method to generate List of data using RecyclerView with custom adapter*/
     private void generateDataList(CityGroup cityGroup) {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.city_list);
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(cityGroup.getCities()));
+        recyclerView.setAdapter(new CityListViewAdapter(cityGroup.getCities()));
         // The city_weather_container only shows up when the screen's width is 600dp or larger
         if (findViewById(R.id.city_weather_container) != null) {
             mTwoPane = true;
         }
     }
 
-    class SimpleItemRecyclerViewAdapter extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
+    class CityListViewAdapter extends RecyclerView.Adapter<CityListViewAdapter.ViewHolder> {
 
         private final List<City> mValues;
 
-        SimpleItemRecyclerViewAdapter(List<City> items) {
+        CityListViewAdapter(List<City> items) {
             mValues = items;
         }
-
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -109,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (mTwoPane) {
-                        int selectedSong = holder.getAdapterPosition();
-                        CityWeatherFragment fragment = CityWeatherFragment.newInstance(selectedSong);
+                        int selectedCity = holder.mItem.getGlobalIdLocal();
+                        CityWeatherFragment fragment = CityWeatherFragment.newInstance(selectedCity);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.city_weather_container, fragment)
                                 .addToBackStack(null)
@@ -118,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         Context context = v.getContext();
                         Intent intent = new Intent(context, CityWeatherActivity.class);
-                        intent.putExtra(CityUtils.CITY_ID_KEY, holder.getAdapterPosition());
+                        intent.putExtra("cityGlobalLocal", holder.mItem.getGlobalIdLocal());
                         context.startActivity(intent);
                     }
                 }

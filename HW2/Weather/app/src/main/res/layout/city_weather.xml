@@ -1,7 +1,421 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/city_weather"
-    style="?android:attr/textAppearanceLarge"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/standard_margin"
-    android:textIsSelectable="true"/>
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        // 1
+
+        <TextView android:textSize="15dp" android:padding="20dp" android:id="@+id/date1"/>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Precipitation Prob."
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/precProbVal1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+              />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Min. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/minTempVal1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Max. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/maxTempVal1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Pred. Wind Direction"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/predWindDirVal1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+
+        // 2
+
+        <TextView android:textSize="15dp" android:padding="20dp" android:id="@+id/date2"/>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Precipitation Prob."
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/precProbVal2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Min. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/minTempVal2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Max. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/maxTempVal2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Pred. Wind Direction"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/predWindDirVal2"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+
+
+            // 3
+
+        <TextView android:textSize="15dp" android:padding="20dp" android:id="@+id/date3"/>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Precipitation Prob."
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/precProbVal3"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Min. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/minTempVal3"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Max. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/maxTempVal3"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Pred. Wind Direction"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/predWindDirVal3"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+
+
+        // 4
+
+        <TextView android:textSize="15dp" android:padding="20dp" android:id="@+id/date4"/>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Precipitation Prob."
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/precProbVal4"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Min. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/minTempVal4"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Max. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/maxTempVal4"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Pred. Wind Direction"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/predWindDirVal4"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+
+
+        // 5
+
+        <TextView android:textSize="15dp" android:padding="20dp" android:id="@+id/date5"/>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Precipitation Prob."
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/precProbVal5"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Min. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/minTempVal5"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Max. Temperature"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/maxTempVal5"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+        <TableRow android:paddingHorizontal="20dp" android:paddingBottom="20dp">
+            <TextView
+                android:gravity="center"
+                android:text="Pred. Wind Direction"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                />
+
+            <TextView
+                android:id="@+id/predWindDirVal5"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                />
+        </TableRow>
+    </TableLayout>
+    </LinearLayout>
+
+</ScrollView>
